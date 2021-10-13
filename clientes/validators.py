@@ -1,4 +1,4 @@
-
+import re
 from rest_framework import serializers
 
 
@@ -12,3 +12,10 @@ def nome_valido(nome):
 
 def rg_valido(numero_do_rg):
     return len(numero_do_rg) == 9
+
+
+def celular_valido(numero_celular):
+    """ verifica se o celular é Válido COM REGEX (11 91234-1234)"""
+    modelo = '[0-9]{2} [0-9]{5}-[0-9]{4}'
+    resposta = re.findall(modelo, numero_celular)
+    return resposta
