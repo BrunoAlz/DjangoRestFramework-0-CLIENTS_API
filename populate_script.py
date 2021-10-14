@@ -23,5 +23,5 @@ def criando_pessoas(quantidade_de_pessoas):
         p = Cliente(nome=nome, email=email, cpf=cpf, rg=rg, celular=celular, ativo=ativo)
         p.save()
 
-criando_pessoas(500)
+criando_pessoas(50)
 print('Sucesso!')
